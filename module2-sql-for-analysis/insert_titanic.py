@@ -12,6 +12,8 @@ from io import StringIO
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
 
+#https://stackoverflow.com/questions/2987433/how-to-import-csv-file-data-into-a-postgresql-table
+
 
 def psql_insert_copy(table, conn, keys, data_iter):
     dbapi_conn = conn.connection
