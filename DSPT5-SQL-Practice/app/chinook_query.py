@@ -1,5 +1,6 @@
 #chinook_query.py
 
+#Imports
 import os #using os rather than string becasue it might not work on other computers
 import sqlite3
 

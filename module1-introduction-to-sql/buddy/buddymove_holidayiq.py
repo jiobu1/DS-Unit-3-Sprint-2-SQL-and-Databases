@@ -16,7 +16,7 @@ Then write the following queries (also with sqlite3) to test:
 Your code (to reproduce all above steps) should be saved in buddymove_holidayiq.py, and added to the repository along with the generated SQLite database.
 
 """
-
+#Imports
 import os #using os rather than string becasue it might not work on other computers
 import sqlite3
 import pandas as pd

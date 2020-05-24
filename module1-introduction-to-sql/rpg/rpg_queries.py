@@ -1,3 +1,4 @@
+# rpg_queries.py
 """
 Use sqlite3 to load and write queries to explore the data, and answer the following questions:
 
@@ -14,6 +15,7 @@ To complete the assignment you should write a file rpg_queries.py that imports s
 programmatically executes and reports results for the above queries.
 """
 
+#Imports
 import os #using os rather than string becasue it might not work on other computers
 import sqlite3
 

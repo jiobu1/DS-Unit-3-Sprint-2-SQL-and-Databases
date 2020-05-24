@@ -5,6 +5,8 @@
 Set up and inserting the RPG data into a PostgreSQL database
 """
 
+
+#Imports
 import os
 import sqlite3
 from dotenv import load_dotenv

@@ -1,5 +1,7 @@
 # app/elephant_queries.py
 
+
+#Imports
 import os
 from dotenv import load_dotenv
 import psycopg2
@@ -9,8 +11,8 @@ import json
 import pandas as pd
 
 load_dotenv() #> loads contents of the .env file into the script's environment
-### Connect to ElephantSQL-hosted PostgreSQL
 
+### Connect to ElephantSQL-hosted PostgreSQL
 DB_NAME = os.getenv("DB_NAME", default='OOPS')
 DB_USER = os.getenv("DB_USER", default='OOPS')
 DB_PASSWORD = os.getenv("DB_PASSWORD", default='OOPS')
