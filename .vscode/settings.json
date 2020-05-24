@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/Users/jisha/.local/share/virtualenvs/Unit_320_SQL-and-Databases-YaFjfGay/bin/python"
+    "python.pythonPath": "/Users/jisha/.local/share/virtualenvs/Unit_320_SQL-and-Databases-YaFjfGay/bin/python",
+    "python.linting.enabled": true
 }

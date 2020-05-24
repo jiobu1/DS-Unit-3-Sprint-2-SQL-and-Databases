@@ -19,14 +19,14 @@ import sqlite3
 
 # construct a path to wherever your database exists
 #DB_FILEPATH = "chinook.db"
-DB_FILEPATH = os.path.join(os.path.dirname(__file__), "rpg_db.sqlite3") # relative filepath directory
+DB_FILEPATH = os.path.join(os.path.dirname(__file__),"rpg_db.sqlite3") # relative filepath directory
 
 connection = sqlite3.connect(DB_FILEPATH)
 connection.row_factory = sqlite3.Row # allow us to reference rows as dictionaries
-# print("CONNECTION:", connection)
+print("CONNECTION:", connection)
 
 cursor = connection.cursor()
-# print("CURSOR", cursor)
+print("CURSOR", cursor)
 
 # How many total Characters are there?
 query1 = "SELECT COUNT(DISTINCT character_id) as total FROM charactercreator_character;"
