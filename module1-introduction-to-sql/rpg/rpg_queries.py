@@ -81,7 +81,7 @@ print('\n')
 # How many Weapons does each character have? (Return first 20 rows)
 query6= "SELECT COUNT(item_id), character_id FROM charactercreator_character_inventory WHERE item_id >=138 GROUP BY character_id LIMIT 20;"
 result6 = cursor.execute(query6).fetchall()
-print("QUESTION 5:")
+print("QUESTION 6:")
 # print(f"There are {result5} items")
 for row in result6:
     # print(row[0], row[1], row[2])
@@ -96,5 +96,9 @@ print(f"QUESTION 7:On average, each Character has {(result7[0][0]):.0f} Items. \
 # # On average, how many Weapons does each character have?
 query8 =  "SELECT AVG(Items) FROM (SELECT COUNT(DISTINCT item_id) as Items, character_id FROM charactercreator_character_inventory WHERE item_id>=138 GROUP BY character_id)"
 result8 =  cursor.execute(query8).fetchall()
-print(f"QUESTION 8:On average, each Character has {(result8[0][0]):.0f} Weapons. \n")
+print(f"QUESTION 8:On average, each Character has {(result8[0][0]):.2f} Weapons. \n")
 
+alt_query = "SELECT avg(count) FROM (SELECT count(item_ptr_id) as count FROM armory_weapon as aw, armory_item as ai, charactercreator_character_inventory as cci WHERE ai.item_id = cci.item_id AND ai.item_id = aw.item_ptr_id group by character_id)"
+alt_result = cursor.execute(alt_query).fetchall()
+print('ALT SOLUTION')
+print(f"QUESTION 8:On average, each Character has {(alt_result[0][0]):.2f} Weapons. \n")
