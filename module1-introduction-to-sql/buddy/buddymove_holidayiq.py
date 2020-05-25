@@ -53,8 +53,17 @@ print(f"QUESTION1: There are {result1[0][0]} rows. \n")
 
 #How many users who reviewed at least 100 Nature in the category also reviewed at least 100 in the Shopping category?
 query2 = "SELECT COUNT(Nature>=100), COUNT(Shopping>=100) FROM buddymove_holidayiq WHERE Nature = Shopping"
+alt_query = """
+SELECT COUNT (*)
+FROM buddymove_holidayiq
+WHERE NATURE >=100 AND Shopping >=100 
+"""
+result_alt = cursor.execute(alt_query).fetchall()
 result2 = cursor.execute(query2).fetchall()
 print(f"QUESTION 2:There are {result2[0][0]} where the review for Nature and Shopping are both at least 100.\n")
+print(f"QUESTION 2:There are {result_alt[0][0]} where the review for Nature and Shopping are both at least 100.\n")
+
+
 
  #(Stretch) What are the average number of reviews for each category?
 sports = "SELECT AVG(Sports) FROM buddymove_holidayiq"
