@@ -120,3 +120,9 @@ breakpoint()
 
 pikas = list(collection.find({"name":"Pikachu"})) # SELECT * FROM pokemon WHERE name = "Pikachu"
 print(len(pikas), "PIKAS")
+
+# collection.insert_one({"_id": "OURVAL", "name": "TEST"})
+#can overwrite the _id but not insert duplicate _id values
+
+strong = list(collection.find({"level":{"$gte": 60}}))
+#TODO: also try to accounts for our mistakes "lvl" vs level
