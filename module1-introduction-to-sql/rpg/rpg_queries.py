@@ -66,15 +66,34 @@ result4 = cursor.execute(query4).fetchall()
 print(f"QUESTION 4: There are {result4[0][0]} weapons.")
 print(f"Of the {result3[0][0]}, {(result3[0][0]-result4[0][0])} are not weapons.\n")
 
+alt_query4 = 'SELECT count(item_id) FROM armory_item as ai, armory_weapon as aw WHERE ai.item_id = aw.item_ptr_id;'
+alt_result4 = cursor.execute(alt_query4).fetchall()
+print('ALT SOLUTION')
+print(f"QUESTION 4: There are {alt_result4[0][0]} items.\n")
+alt_query4_2 = 'SELECT count(item_id) FROM armory_item WHERE item_id NOT IN(SELECT item_ptr_id FROM armory_weapon);'
+alt_result4_2 = cursor.execute(alt_query4_2).fetchall()
+print(f"QUESTION 4: There are {alt_result4_2[0][0]} items.\n")
+
 
 # How many Items does each character have? (Return first 20 rows)?
-query5= "SELECT DISTINCT character_id, item_id FROM charactercreator_character_inventory GROUP BY item_id LIMIT 20;"
+query5= "SELECT DISTINCT character_id, COUNT(item_id) FROM charactercreator_character_inventory GROUP BY character_id LIMIT 20;"
 result5 = cursor.execute(query5).fetchall()
 # print(f"There are {result5} items")
 print("QUESTION 5:")
 for row in result5:
     # print(row[0], row[1], row[2])
-    print(row['item_id'], row['character_id'])
+    print(row['character_id'], row['count(item_id)'])
+
+print('\n')
+
+alt_query5 = 'SELECT count(item_id) FROM charactercreator_character_inventory as cci group by character_id LIMIT 20;'
+alt_result5 = cursor.execute(alt_query5).fetchall()
+# print(f"There are {result5} items")
+print("ALT SOLUTION:")
+print("QUESTION 5:")
+for row in alt_result5:
+    # print(row[0], row[1], row[2])
+    print(row['count(item_id)'])
 
 print('\n')
 
@@ -88,17 +107,32 @@ for row in result6:
     print(row['character_id'], row['COUNT(item_id)']) 
 print('\n')
 
+alt_query6= "SELECT count(item_ptr_id) FROM armory_weapon as aw, armory_item as ai, charactercreator_character_inventory as cci WHERE ai.item_id = cci.item_id AND ai.item_id = aw.item_ptr_id group by character_id LIMIT 20;"
+alt_result6 = cursor.execute(alt_query6).fetchall()
+print('ALT SOLTION')
+print("QUESTION 6:")
+# print(f"There are {result5} items")
+for row in alt_result6:
+    # print(row[0], row[1], row[2])
+    print(row['count(item_ptr_id)']) 
+print('\n')
+
 # On average, how many Items does each Character have?
 query7 =  "SELECT AVG(Items) FROM (SELECT COUNT(DISTINCT item_id) as Items, character_id FROM charactercreator_character_inventory GROUP BY character_id)"
 result7 =  cursor.execute(query7).fetchall()
-print(f"QUESTION 7:On average, each Character has {(result7[0][0]):.0f} Items. \n")
+print(f"QUESTION 7:On average, each Character has {(result7[0][0]):.2f} Items. \n")
+
+alt_query7= 'SELECT avg(count) FROM (SELECT count(item_id) as count FROM charactercreator_character_inventory as cci group by character_id);'
+alt_result7 = cursor.execute(alt_query7).fetchall()
+print('ALT SOLTION')
+print(f"QUESTION 7:On average, each Character has {(alt_result7[0][0]):.2f} Items. \n")
 
 # # On average, how many Weapons does each character have?
 query8 =  "SELECT AVG(Items) FROM (SELECT COUNT(DISTINCT item_id) as Items, character_id FROM charactercreator_character_inventory WHERE item_id>=138 GROUP BY character_id)"
 result8 =  cursor.execute(query8).fetchall()
 print(f"QUESTION 8:On average, each Character has {(result8[0][0]):.2f} Weapons. \n")
 
-alt_query = "SELECT avg(count) FROM (SELECT count(item_ptr_id) as count FROM armory_weapon as aw, armory_item as ai, charactercreator_character_inventory as cci WHERE ai.item_id = cci.item_id AND ai.item_id = aw.item_ptr_id group by character_id)"
-alt_result = cursor.execute(alt_query).fetchall()
+alt_query8 = "SELECT avg(count) FROM (SELECT count(item_ptr_id) as count FROM armory_weapon as aw, armory_item as ai, charactercreator_character_inventory as cci WHERE ai.item_id = cci.item_id AND ai.item_id = aw.item_ptr_id group by character_id)"
+alt_result8 = cursor.execute(alt_query8).fetchall()
 print('ALT SOLUTION')
-print(f"QUESTION 8:On average, each Character has {(alt_result[0][0]):.2f} Weapons. \n")
+print(f"QUESTION 8:On average, each Character has {(alt_result8[0][0]):.2f} Weapons. \n")

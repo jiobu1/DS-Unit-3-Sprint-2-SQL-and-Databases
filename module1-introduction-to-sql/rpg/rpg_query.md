@@ -1,3 +1,6 @@
+## Answers
+## Alternate solution answers
+
 QUESTION 1:There are 302 characters.
 
 QUESTION 2:There are 5 sublclasses of characters
@@ -12,30 +15,59 @@ QUESTION 3: There are 174 items.
 QUESTION 4: There are 37 weapons.
 Of the 174, 137 are not weapons.
 
+ALT SOLUTION
+QUESTION 4: There are 37 items.
+
+QUESTION 4: There are 137 items.
+
 QUESTION 5:
-1 119
-2 49
-3 35
-4 81
-5 19
-6 183
+1 3
+2 3
+3 2
+4 4
+5 4
+6 1
 7 5
 8 3
-9 31
-10 27
-11 71
-12 45
-13 135
-14 95
-15 86
-16 45
-17 18
-18 65
-19 63
+9 4
+10 4
+11 3
+12 3
+13 4
+14 4
+15 4
+16 1
+17 5
+18 5
+19 3
 20 1
 
 
+ALT SOLUTION:
 QUESTION 5:
+3
+3
+2
+4
+4
+1
+5
+3
+4
+4
+3
+3
+4
+4
+4
+1
+5
+5
+3
+1
+
+
+QUESTION 6:
 5 2
 7 1
 11 1
@@ -58,6 +90,36 @@ QUESTION 5:
 47 1
 
 
-QUESTION 7:On average, each Character has 3 Items. 
+ALT SOLTION
+QUESTION 6:
+2
+1
+1
+1
+1
+1
+1
+3
+2
+1
+1
+1
+2
+3
+2
+2
+2
+1
+1
+1
 
-QUESTION 8:On average, each Character has 1 Weapons. 
+
+QUESTION 7:On average, each Character has 2.97 Items. 
+
+ALT SOLTION
+QUESTION 7:On average, each Character has 2.97 Items. 
+
+QUESTION 8:On average, each Character has 1.31 Weapons. 
+
+ALT SOLUTION
+QUESTION 8:On average, each Character has 1.31 Weapons. 
