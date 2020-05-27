@@ -43,7 +43,6 @@ collection = db.charactercreator_character
 collection.delete_many({})
 
 #4. Insert Data into DB
-rpg_df.reset_index(inplace=True) #Reset Index
 collection.insert_many(rpg_df.to_dict("records")) #Insert into DB
 
 #5. Confirm table was inserted
