@@ -1,4 +1,4 @@
-#titanic_mongo.py
+#rpg_mongo.py
 
 """
 Reproduce (debugging as needed) the live lecture task of setting up and 
@@ -7,6 +7,9 @@ to do so here. Then answer the following question (can be a comment in
 the top of your code or in Markdown) 
 - "How was working with MongoDB different from working with PostgreSQL? 
 What was easier, and what was harder?
+
+- Adding the db to mongo was easier for me than adding data to the postgres, 
+but overall both are just different rather than harder or easier. 
 """
 
 import pymongo 
@@ -15,7 +18,7 @@ import sqlite3
 import psycopg2
 import pandas as pd 
 import numpy as np 
-from itertools import chain
+
 from dotenv import load_dotenv
 
 load_dotenv()
