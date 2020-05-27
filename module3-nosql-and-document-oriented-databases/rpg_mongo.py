@@ -52,7 +52,6 @@ collection.insert_many(rpg_df.to_dict("records")) #Insert into DB
 print(collection.find_one())
 
 
-
 #references
 #https://datacarpentry.org/python-ecology-lesson/09-working-with-sql/index.html
 #https://sricharanphp.blogspot.com/2020/01/insert-pandas-dataframe-into-mongodb.html
