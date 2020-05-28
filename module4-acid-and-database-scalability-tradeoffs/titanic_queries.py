@@ -37,7 +37,7 @@ print("CONNECTION:", pg_connection)
 pg_cursor = pg_connection.cursor()
 print("CURSOR:", pg_cursor)
 
-query1 = """SELECT COUNT(survived) FROM titanic WHERE survived = 1;"""
+query1 = """SELECT COUNT(survived) FROM passengers WHERE survived = TRUE;"""
 result1 = pg_cursor.execute(query1)
-result1.fetchone()
+result1.fetchall()
 
