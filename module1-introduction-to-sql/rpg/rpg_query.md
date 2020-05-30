@@ -123,3 +123,27 @@ QUESTION 8:On average, each Character has 1.31 Weapons.
 
 ALT SOLUTION
 QUESTION 8:On average, each Character has 1.31 Weapons. 
+
+ANSWERS FROM MONGO DB
+QUESTION 1: There are 302 characters.
+
+QUESTION 2:
+There are 75 clerics as a subclass of characters.
+There are 68 fighters as a subclass of characters.
+There are 108 mages as a subclass of characters.
+There are 11 necromancers as a subclass of characters.
+There are 51 thiefs as a subclass of characters.
+
+
+QUESTION 3: There are 174 items.
+
+QUESTION 4:
+There are 37 weapons.
+137 are not weapons.
+
+QUESTION 5: Still working on answer
+QUESTION 6: Still working on answer
+
+QUESTION 7: Each character has about 0.58 items.
+
+QUESTION 8: Each character has about 0.12 weapons.
