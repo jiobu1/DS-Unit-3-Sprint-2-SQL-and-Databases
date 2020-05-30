@@ -56,7 +56,11 @@ print(f"There are {weapon_count} weapons.")
 print(f"{item_count - weapon_count} are not weapons.\n")
 
 #5. How many items does each character have?(Return first 20 rows)
-
+characters = collection.find({'model': 'charactercreator.character'})
+print("QUESTION 5:")
+for character in characters[:20]:
+    print(character['fields']['name'], len(character['fields']['inventory']))
+print('\n')
 
 #6. How many Weapons does each character have? (Return first 20 rows)
 
