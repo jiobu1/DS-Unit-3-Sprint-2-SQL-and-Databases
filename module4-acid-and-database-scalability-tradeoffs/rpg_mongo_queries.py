@@ -16,3 +16,17 @@ SQLite).
 To complete the assignment you should write a file rpg_queries.py that imports sqlite3 and 
 programmatically executes and reports results for the above queries.
 """
+
+#Imports
+import pymongo
+from dotenv import load_dotenv
+
+load_dotenv()
+
+#Establish MongoDB connection
+DB_USER = os.getenv("MONGO_USER", default="OOPS")
+DB_PASSWORD = os.getenv("MONGO_PASSWORD", default="OOPS")
+CLUSTER_NAME = os.getenv("MONGO_CLUSTER_NAME", default="OOPS")
+
+client = pymongo.MongoClient(f"mongodb+srv://{DB_USER}:{DB_PASSWORD}@{CLUSTER_NAME}.mongodb.net/test?retryWrites=true&w=majority")
+
