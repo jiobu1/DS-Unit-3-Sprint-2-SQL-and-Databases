@@ -63,6 +63,7 @@ for character in characters[:20]:
 print('\n')
 
 #6. How many Weapons does each character have? (Return first 20 rows)
+print("QUESTION 6:")
 characters = collection.find({'model': 'charactercreator.character'})
 weapons = collection.find({'model':'armory.weapon'})
 weapon_pk = [weapon['pk'] for weapon in weapons ]
@@ -71,8 +72,6 @@ for character in characters[:20]:
     num_weapons = len([item for item in inventory if item in weapon_pk ])
     print(character['fields']['name'], num_weapons)
 print('\n')
-
-
 
 #7. On average, how many Items does each Character have?
 average_items = item_count/character_count

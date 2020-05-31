@@ -39,12 +39,32 @@ At quos 1
 Expedita c 2
 Autem mollitia fuga lauda 5
 
-QUESTION 6: Still working 
 
-QUESTION 7: Each character has about 0.58 items. (need to work through)
+Non nobis et of 0
+Accusantium amet quidem eve 0
+Sed itaque beatae pari 0
+Aspe 0
+Quod tempora 1
+Soluta dol 1
+Sed ullam tempora iusto co 0
+Laboriosam 0
+Eaque at corpori 1
+Fug 0
+Earum vol 0
+Molestias face 1
+Quod 1
+Provident soluta simil 0
+Ab illum invento 1
+Velit 0
+Sapiente 1
+At quos 0
+Expedita c 0
+Autem mollitia fuga lauda 2
 
-QUESTION 8: Each character has about 0.12 weapons. (need to workthrough)
 
+QUESTION 7: Each character has about 0.58 items.
+
+QUESTION 8: Each character has about 0.12 weapons.
 
 TITANIC QUERY
 Passengers who survived: 342
