@@ -9,7 +9,7 @@ import sqlite3
 DB_FILEPATH = os.path.join(os.path.dirname(__file__), "..", "data", "chinook.db") # relative filepath directory
 
 connection = sqlite3.connect(DB_FILEPATH)
-connection.row_factory = sqlite3.Row # allow us to reference rows as dictionaries
+connection.row_factcory = sqlite3.Row # allow us to reference rows as dictionaries
 print("CONNECTION:", connection)
 
 cursor = connection.cursor()
